@@ -1,13 +1,11 @@
 //
-// Calculate the current slide index based on the scroll position and viewport
+// Calculate the current screenshot index based on the scroll position and viewport
 // width of the carousel and use it to keep the same screenshot in view if
 // the window is resized and also to display the currently-selected index
 // in the navigation.
 //
 
-let lastKnownViewportWidth = null
-let lastKnownViewportScrollPosition = null
-let currentSlideIndex = 0
+let currentScreenshotIndex = null
 let transitioning = false
 
 let navigationIndicators = null
@@ -15,7 +13,7 @@ let navigationIndicators = null
 function updateNavigationIndicators () {
   let navigationIndicatorIndex = 0
   navigationIndicators.forEach(navigationIndicator => {
-    if (navigationIndicatorIndex === currentSlideIndex) {
+    if (navigationIndicatorIndex === currentScreenshotIndex) {
       if (transitioning) {
         navigationIndicator.className = 'transitioning'
       } else {
@@ -28,11 +26,31 @@ function updateNavigationIndicators () {
   })
 }
 
+function navigationClickHandler (event) {
+  navigateToScreenshotAnchor(event.target)
+}
+
+function navigateToScreenshotAnchor (screenshotAnchor) {
+  if (screenshotAnchor === '') {
+    transitioning = false
+    currentScreenshotIndex = 0
+    updateNavigationIndicators()
+    return
+  }
+
+  const requestedIndex = Number(screenshotAnchor.toString().replace(/.*?screenshot/, '')) - 1
+  if (requestedIndex !== currentScreenshotIndex) {
+    transitioning = true
+    currentScreenshotIndex = requestedIndex
+    updateNavigationIndicators()
+  }
+}
+
 window.addEventListener('resize', () => {
-  // Update the scroll position so the same slide stays perfectly
+  // Update the scroll position so the same Screenshot stays perfectly
   // positioned within the carousel.
   const viewport = document.getElementById('viewport')
-  viewport.scrollLeft = viewport.offsetWidth * currentSlideIndex
+  viewport.scrollLeft = viewport.offsetWidth * currentScreenshotIndex
 })
 
 window.addEventListener('load', () => {
@@ -40,34 +58,39 @@ window.addEventListener('load', () => {
   // Save references to the navigation indicators.
   navigationIndicators = document.querySelectorAll('nav ol li a')
 
+  // Set the initial Screenshot based on the URL
+  navigateToScreenshotAnchor(window.location.hash)
+
   // When a navigation indicator is clicked, we augment the default behaviour
   // by updating the indicators to display the requested position with a dimmed
   // indicator. When the transition is complete, our scroll event will pick it
   // up and brighten the indicator.
   navigationIndicators.forEach(navigationIndicator => {
-    navigationIndicator.addEventListener('click', event => {
-      const requestedIndex = Number(event.target.toString().replace(/.*?screenshot/, '')) - 1
-      transitioning = true
-      currentSlideIndex = requestedIndex
-      updateNavigationIndicators()
-    })
+    navigationIndicator.addEventListener('click', navigationClickHandler)
   })
 
-  updateNavigationIndicators()
+  // Also add the navigation indicator triggers to the arrow buttons.
+  const previousButtons = document.querySelectorAll('.screenshot .controls .previous')
+  const nextButtons = document.querySelectorAll('.screenshot .controls .next')
+
+  previousButtons.forEach(previousButton => {
+    previousButton.addEventListener('click', navigationClickHandler)
+  })
+
+  nextButtons.forEach(nextButton => {
+    nextButton.addEventListener('click', navigationClickHandler)
+  })
+
+  // updateNavigationIndicators()
 
   document.getElementById('viewport').addEventListener('scroll', (event) => {
     const currentViewportWidth = event.target.offsetWidth;
     const currentViewportScrollPosition = event.target.scrollLeft;
 
     if (currentViewportScrollPosition % currentViewportWidth === 0) {
-      currentSlideIndex = currentViewportScrollPosition / currentViewportWidth
+      currentScreenshotIndex = currentViewportScrollPosition / currentViewportWidth
       transitioning = false
       updateNavigationIndicators()
     }
-
-    lastKnownViewportWidth = currentViewportWidth
-    lastKnownViewportScrollPosition = currentViewportScrollPosition
-
-    // console.log(`${lastKnownViewportWidth}: ${lastKnownViewportScrollPosition}`);
   })
 })
