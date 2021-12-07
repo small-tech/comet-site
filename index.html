@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Site.js</title>
+  <!-- Don’t have the browser request the favicon. -->
+  <link rel='icon' href='data:,'>
+  <link rel='stylesheet' href='index.css'>
+</head>
+<body>
+
+<script>
+  // Localise the page for supported languages.
+  const language = window.navigator.language;
+  if (language === 'nl' || language === 'tr') {
+    document.documentElement.setAttribute('lang', language);
+  }
+</script>
+
+<header>
+  <img id='icon' src='comet-128.svg' alt='Comet logo: a flat minimalist illustration of an orange comet with a yellow center.'>
+
+  <h1>Comet</h1>
+
+  <p>A distraction-free Git commit message editor with spell-check, first line character limit warnings, and emoji support.</p>
+</header>
+
+
+<!--
+  Progressively-enhanced carousel for screenshots.
+
+  For techniques use, see:
+
+  Super Simple Progressively Enhanced Carousel with CSS Scroll Snap (Marksu Oberlehner)
+  https://markus.oberlehner.net/blog/super-simple-progressively-enhanced-carousel-with-css-scroll-snap/
+
+  CSS-only carousel (Chris Coyier)
+  https://css-tricks.com/css-only-carousel/
+-->
+<section class="carousel" aria-label="Gallery">
+  <div class="viewport">
+    <div class="screenshot" id="screenshot1">
+      <div class="content">
+        <img src="screenshots/en/comet-basic-usage.png" />
+      </div>
+      <div class="controls">
+        <a class="previous" href="#screenshot4"
+            class="previous">Go to previous screenshot</a>
+        <a class="next" href="#screenshot2"
+            class="next">Go to next screenshot</a>
+      </div>
+    </div>
+
+    <div class="screenshot" id="screenshot2">
+      <div class="content">
+        <img src="screenshots/en/comet-spell-check.png" />
+      </div>
+      <div class="controls">
+        <a class="previous" href="#screenshot1"
+            class="previous">Go to previous screenshot</a>
+        <a class="next" href="#screenshot3"
+            class="next">Go to next screenshot</a>
+      </div>
+    </div>
+
+    <div class="screenshot" id="screenshot3">
+      <div class="content">
+        <img src="screenshots/en/comet-emoji.png" />
+      </div>
+      <div class="controls">
+        <a class="previous" href="#screenshot2"
+            class="previous">Go to previous screenshot</a>
+        <a class="next" href="#screenshot4"
+            class="next">Go to next screenshot</a>
+      </div>
+    </div>
+
+    <div class="screenshot" id="screenshot4">
+      <div class="content">
+        <img src="screenshots/en/comet-settings.png" />
+      </div>
+      <div class="controls">
+        <a class="previous" href="#screenshot3"
+            class="previous">Go to previous screenshot</a>
+        <a class="next" href="#screenshot5"
+            class="next">Go to next screenshot</a>
+      </div>
+    </div>
+
+    <div class="screenshot" id="screenshot5">
+      <div class="content">
+        <img src="screenshots/en/comet-welcome.png" />
+      </div>
+      <div class="controls">
+        <a class="previous" href="#screenshot1"
+            class="previous">Go to previous screenshot</a>
+        <a class="next" href="#screenshot3"
+            class="next">Go to next screenshot</a>
+      </div>
+    </div>
+  </div>
+
+  <aside class="carousel__navigation">
+    <ol class="carousel__navigation-list">
+      <li class="carousel__navigation-item">
+        <a href="#screenshot1"
+           class="carousel__navigation-button">Screenshot 1</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#screenshot2"
+           class="carousel__navigation-button">Screenshot 2</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#screenshot3"
+           class="carousel__navigation-button">Screenshot 3</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#screenshot4"
+           class="carousel__navigation-button">Screenshot 4</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#screenshot5"
+           class="carousel__navigation-button">Screenshot 5</a>
+      </li>
+    </ol>
+  </aside>
+
+</section>
+
+<footer>
+  <ul>
+    <li>Help</li>
+    <li>Issues</li>
+    <li>Donate!</li>
+  </ul>
+  <small>Licensed under: GNU GPL v3.0</small>
+</footer>
+
+</body>
+</html>

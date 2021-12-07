@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #0d52bf; /* Blueberry 700 */
+}
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+header p {
+  font-size: 1.5em;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 0.25em;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+footer li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+#icon {
+  margin-top: 1em;
+}
+
+h1 {
+  display: block;
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*
+  CSS-only carousel styles based on https://css-tricks.com/css-only-carousel/
+  by Chris Coyier.
+*/
+.carousel {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+.viewport {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  align-items: stretch;
+  scrollbar-width: none;
+  /* background-color: yellow; */
+}
+
+.screenshot {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  align-self: normal;
+  scroll-snap-align: start;
+  /* background-color: aquamarine; */
+}
+
+.viewport::before,
+.previous {
+  left: 0;
+}
+
+.viewport::after,
+.next {
+  right: 0;
+}
+
+.content img {
+  max-height: 50vh;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.carousel__navigation {
+  position: absolute;
+  right: 0;
+  bottom: -2em;
+  left: 0;
+  text-align: center;
+}
+
+.carousel__navigation-button {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #333;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+  font-size: 0;
+  transition: transform 0.1s;
+}
+
+.carousel__navigation-list,
+.carousel__navigation-item {
+  display: inline-block;
+}
+
+.viewport::before,
+.viewport::after,
+.controls a {
+  position: absolute;
+
+  /* Center vertically (50% of container - 50% of self). */
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 3rem;
+  height: 3rem;
+  background-clip: content-box;
+  border: 0.25rem solid transparent;
+  border-radius: 50%;
+}
+
+.viewport::before,
+.viewport::after,
+.controls a {
+  z-index: 1;
+  background-size: 1rem 1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: transparent;
+  font-size: 0;
+}
+
+.viewport::before,
+.viewport::after {
+  box-sizing: border-box;
+
+  content: '';
+  background-color: #333;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.viewport::before {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.viewport::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+}
+
