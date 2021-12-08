@@ -30,15 +30,23 @@ function navigationClickHandler (event) {
   navigateToScreenshotAnchor(event.target)
 }
 
-function navigateToScreenshotAnchor (screenshotAnchor) {
+function navigateToScreenshotAnchor (screenshotAnchor, transition = true) {
+  let requestedIndex
+
   if (screenshotAnchor === '') {
+    requestedIndex = 0
+    transition = false
+  }
+
+  requestedIndex = Number(screenshotAnchor.toString().replace(/.*?screenshot/, '')) - 1
+
+  if (!transition) {
     transitioning = false
-    currentScreenshotIndex = 0
+    currentScreenshotIndex = requestedIndex
     updateNavigationIndicators()
     return
   }
 
-  const requestedIndex = Number(screenshotAnchor.toString().replace(/.*?screenshot/, '')) - 1
   if (requestedIndex !== currentScreenshotIndex) {
     transitioning = true
     currentScreenshotIndex = requestedIndex
@@ -59,7 +67,7 @@ window.addEventListener('load', () => {
   navigationIndicators = document.querySelectorAll('nav ol li a')
 
   // Set the initial Screenshot based on the URL
-  navigateToScreenshotAnchor(window.location.hash)
+  navigateToScreenshotAnchor(window.location.hash, /* transition */ false)
 
   // When a navigation indicator is clicked, we augment the default behaviour
   // by updating the indicators to display the requested position with a dimmed
@@ -80,8 +88,6 @@ window.addEventListener('load', () => {
   nextButtons.forEach(nextButton => {
     nextButton.addEventListener('click', navigationClickHandler)
   })
-
-  // updateNavigationIndicators()
 
   document.getElementById('viewport').addEventListener('scroll', (event) => {
     const currentViewportWidth = event.target.offsetWidth;
