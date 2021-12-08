@@ -28,6 +28,31 @@ header p {
   margin-top: 0.25em;
 }
 
+#install {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  /* font-weight: bold; */
+  font-size: 2em;
+}
+
+#install img {
+  height: 1.25em;
+  vertical-align: top;
+  margin-right: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+#install small {
+  font-size: 0.5em;
+  margin-top: 0.25em;
+  font-weight: normal;
+  display: inline-block;
+}
+
 footer {
   color: white;
   font-size: 1.5em;
