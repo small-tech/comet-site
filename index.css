@@ -30,13 +30,23 @@ header p {
 
 footer {
   color: white;
+  font-size: 1.5em;
   text-align: center;
-  margin-bottom: 2em;
+  margin-top: 1.75em;
+  margin-bottom: 1em;
+}
+
+footer small {
+  font-size: 0.6em;
 }
 
 footer li {
   display: inline-block;
   margin-right: 1em;
+}
+
+footer ul {
+  margin-bottom: 1em;
 }
 
 #icon {
