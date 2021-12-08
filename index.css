@@ -32,6 +32,7 @@ header p {
   display: inline-block;
   text-decoration: none;
   padding: 0.25em 0.5em;
+  padding-bottom: 0.15em; /* optical adjustment */
   border: 1px solid white;
   border-radius: 0.5em;
   margin-top: 1em;
