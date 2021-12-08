@@ -57,6 +57,8 @@ footer ul {
 small {
   display: block;
   margin-bottom: 0.1em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer li > a {
@@ -67,15 +69,21 @@ footer li > a {
 }
 
 footer li:first-of-type  > a{
-  background-image:url("icons/help-contents-symbolic.svg");
+  background-image: url("icons/help-contents-symbolic.svg");
 }
 
 footer li:nth-of-type(2) > a {
-  background-image:url("icons/bug-symbolic.svg");
+  background-image: url("icons/bug-symbolic.svg");
 }
 
 footer li:nth-of-type(3) > a {
-  background-image:url("icons/positive-feedback-symbolic.svg");
+  background-image: url("icons/positive-feedback-symbolic.svg");
+}
+
+#license img {
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.25em;
 }
 
 a, a:visited {
