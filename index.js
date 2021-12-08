@@ -33,12 +33,12 @@ function navigationClickHandler (event) {
 function navigateToScreenshotAnchor (screenshotAnchor, transition = true) {
   let requestedIndex
 
+  requestedIndex = Number(screenshotAnchor.toString().replace(/.*?screenshot/, '')) - 1
+
   if (screenshotAnchor === '') {
     requestedIndex = 0
     transition = false
   }
-
-  requestedIndex = Number(screenshotAnchor.toString().replace(/.*?screenshot/, '')) - 1
 
   if (!transition) {
     transitioning = false
