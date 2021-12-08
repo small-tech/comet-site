@@ -33,7 +33,7 @@ footer {
   font-size: 1.5em;
   text-align: center;
   margin-top: 1.75em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 footer small {
@@ -43,10 +43,43 @@ footer small {
 footer li {
   display: inline-block;
   margin-right: 1em;
+  padding: 0 0.25em;
+}
+
+footer li:last-of-type {
+  margin-right: 0;
 }
 
 footer ul {
   margin-bottom: 1em;
+}
+
+small {
+  display: block;
+  margin-bottom: 0.1em;
+}
+
+footer li > a {
+  padding-left: 1.25em;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  text-decoration: none;
+}
+
+footer li:first-of-type  > a{
+  background-image:url("icons/help-contents-symbolic.svg");
+}
+
+footer li:nth-of-type(2) > a {
+  background-image:url("icons/bug-symbolic.svg");
+}
+
+footer li:nth-of-type(3) > a {
+  background-image:url("icons/positive-feedback-symbolic.svg");
+}
+
+a, a:visited {
+  color: white;
 }
 
 #icon {

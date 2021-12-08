@@ -10,14 +10,6 @@
 </head>
 <body>
 
-<script>
-  // Localise the page for supported languages.
-  const language = window.navigator.language;
-  if (language === 'nl' || language === 'tr') {
-    document.documentElement.setAttribute('lang', language);
-  }
-</script>
-
 <header>
   <img id='icon' src='comet-128.svg' alt='Comet logo: a flat minimalist illustration of an orange comet with a yellow center.'>
 
@@ -25,7 +17,6 @@
 
   <p>A distraction-free Git commit message editor with spell-check, first line character limit warnings, and emoji support.</p>
 </header>
-
 
 <!--
   Progressively-enhanced carousel for screenshots.
@@ -105,11 +96,13 @@
 
 <footer>
   <ul>
-    <li>Help</li>
-    <li>Issues</li>
-    <li>Donate</li>
+    <li><a href='https://github.com/small-tech/comet/#readme'>Help</a></li>
+    <li><a href='https://github.com/small-tech/comet/issues'>Issues</a></li>
+    <li><a href='https://small-tech.org/fund-us'>Fund</a></li>
   </ul>
-  <small>Copyright ⓒ 2021-present Aral Balkan. Licensed under GNU GPL v3.</small>
+  <small>Made with <a href='https://github.com/small-tech/watson'>Watson</a> for <a href='https://elementary.io'>elementary OS 6.</a></small>
+  <small>Copyright ⓒ 2021-present <a href='https://ar.al'>Aral Balkan</a>, <a href='https://small-tech.org'>Small Technology Foundation</a>.</small>
+  <small>Licensed under <a href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GNU GPLv3</a>.</small>
 </footer>
 
 <script src="index.js"></script>
