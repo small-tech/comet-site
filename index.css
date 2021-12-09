@@ -36,8 +36,8 @@ header p {
   border: 1px solid white;
   border-radius: 0.5em;
   margin-top: 1em;
-  margin-bottom: 0.25em;
-  /* font-weight: bold; */
+  /* margin-bottom: 0.25em; */
+  font-weight: bold;
   font-size: 1.5em;
 }
 
@@ -48,11 +48,12 @@ header p {
   padding-bottom: 0.25em;
 }
 
-.button small {
-  font-size: 0.5em;
-  margin-top: 0.25em;
+aside {
+  /* font-size: 0.5em; */
+  font-style: italic;
+  margin-top: 1em;
   font-weight: normal;
-  display: inline-block;
+  display: block;
 }
 
 .button:nth-of-type(2) {
@@ -111,6 +112,11 @@ footer li:nth-of-type(3) > a {
   background-image: url("icons/positive-feedback-symbolic.svg");
 }
 
+#get-it {
+  text-align: center;
+  color: white;
+}
+
 #license img {
   height: 1em;
   vertical-align: middle;
@@ -119,6 +125,8 @@ footer li:nth-of-type(3) > a {
 
 a, a:visited {
   color: white;
+  text-decoration-thickness: 0.01em;
+
 }
 
 #icon {
