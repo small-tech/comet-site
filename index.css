@@ -28,7 +28,7 @@ header p {
   margin-top: 0.25em;
 }
 
-#install {
+.button {
   display: inline-block;
   text-decoration: none;
   padding: 0.25em 0.5em;
@@ -36,22 +36,27 @@ header p {
   border: 1px solid white;
   border-radius: 0.5em;
   margin-top: 1em;
+  margin-bottom: 0.25em;
   /* font-weight: bold; */
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
-#install img {
+.button img {
   height: 1.25em;
   vertical-align: top;
   margin-right: 0.25em;
   padding-bottom: 0.25em;
 }
 
-#install small {
+.button small {
   font-size: 0.5em;
   margin-top: 0.25em;
   font-weight: normal;
   display: inline-block;
+}
+
+.button:nth-of-type(2) {
+  margin-left: 0.25em;
 }
 
 footer {
