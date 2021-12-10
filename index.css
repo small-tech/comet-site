@@ -15,8 +15,11 @@
 }
 
 html {
-  background-color: #0d52bf; /* Blueberry 700 */
+  background-color: #002e99; /* Blueberry 900 */
   min-width: 320px;
+  background-image: url(background.jpg);
+  background-position: 60% 75%;
+  background-blend-mode: hard-light;
 }
 
 body {
@@ -221,7 +224,7 @@ nav a {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: rgba(0,0,0,0.5);
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -235,7 +238,7 @@ nav a.selected {
 }
 
 nav a.transitioning {
-  outline: 0.25rem solid #666;
+  outline: 0.25rem solid rgba(255,255,255,0.33);
   outline-offset: -0.75rem;
 }
 
@@ -302,7 +305,7 @@ nav ol {
   box-sizing: border-box;
 
   content: '';
-  background-color: #333;
+  background-color: rgba(0,0,0,0.5);;
   z-index: 2;
   pointer-events: none;
 }
