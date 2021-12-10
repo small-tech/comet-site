@@ -1,9 +1,22 @@
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  html {
+    font-size: 11px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   background-color: #0d52bf; /* Blueberry 700 */
+  min-width: 320px;
 }
 
 body {
