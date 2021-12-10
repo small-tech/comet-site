@@ -1,4 +1,4 @@
-# Basic app web site for Comet
+# Comet app web site
 
 [Comet](https://github.com/small-tech/comet) is a little Git commit message editor for elementary OS.
 
