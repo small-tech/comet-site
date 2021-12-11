@@ -181,7 +181,8 @@ h1 {
 #wallpaperInstructions {
   z-index: 1;
   position: fixed;
-  width: min(50%,  500px);
+  width: max(50%, 420px);
+  max-width: 90%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
