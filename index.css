@@ -180,7 +180,7 @@ h1 {
 
 #wallpaperInstructions {
   z-index: 1;
-  position: relative;
+  position: fixed;
   width: min(50%,  500px);
   left: 50%;
   top: 50%;
