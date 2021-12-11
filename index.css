@@ -1,12 +1,27 @@
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 580px) {
+  footer li {
+    margin-right: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   html {
     font-size: 13px;
+  }
+  footer li > a {
+    padding-left: 1em;
   }
 }
 
 @media only screen and (max-width: 380px) {
   html {
     font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  html {
+    font-size: 10px;
   }
 }
 
