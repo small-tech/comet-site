@@ -160,6 +160,8 @@ h1 {
   margin-bottom: 0;
 }
 
+/* Wallpaper layer. */
+
 #wallpaper {
   position: absolute;
   top: 0;
@@ -170,9 +172,46 @@ h1 {
   height: 100%; */
   background-image: url(./comet-wallpaper-4k-by-margo-de-weerdt-small-technology-foundation.jpg);
   background-position: 60% 75%;
-  opacity: 0.5;
+  opacity: 0;
   overflow: hidden;
-  z-index: -1;
+  /* z-index: -1; */
+  pointer-events: none;
+}
+
+#wallpaperInstructions {
+  z-index: 1;
+  position: relative;
+  width: min(50%,  500px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0,0,0,0.66);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#wallpaperInstructions a {
+  font-size: 1.25em;
+}
+
+#wallpaperInstructions img {
+  width: 100%;
+}
+
+#wallpaperInstructions small {
+  line-height: 1.5em;
+}
+
+button {
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 @keyframes fadeIn {
@@ -180,8 +219,31 @@ h1 {
   100% {opacity: 1;}
 }
 
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 .fadeIn {
+  animation-duration: 1s;
+  animation-fill-mode: both;
   animation-name: fadeIn;
+  pointer-events: all !important;
+}
+
+.fadeOut {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeOut;
+  pointer-events: none !important;
+}
+
+kbd {
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0.25em;
+  padding-bottom: 0.1em;
+  border-radius: 0.25em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /*

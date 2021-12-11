@@ -10,120 +10,126 @@
 </head>
 <body>
 
-<header>
-  <img id='icon' src='comet-128.svg' alt='Comet logo: a flat minimalist illustration of an orange comet with a yellow center.'>
+<div id='content'>
+  <header>
+    <img id='icon' src='comet-128.svg' alt='Comet logo: a flat minimalist illustration of an orange comet with a yellow center.'>
 
-  <h1>Comet</h1>
+    <h1>Comet</h1>
 
-  <p>A distraction-free Git commit message editor with spell-check, first line character limit warnings, and emoji support.</p>
-</header>
-
-<!--
-  Progressively-enhanced carousel for screenshots.
-
-  For techniques used, see:
-
-  Super Simple Progressively Enhanced Carousel with CSS Scroll Snap (Marksu Oberlehner)
-  https://markus.oberlehner.net/blog/super-simple-progressively-enhanced-carousel-with-css-scroll-snap/
-
-  CSS-only carousel (Chris Coyier)
-  https://css-tricks.com/css-only-carousel/
--->
-<section class="carousel" aria-label="Gallery">
-  <div id="viewport">
-    <div class="screenshot" id="screenshot1">
-      <div class="content">
-        <img src="screenshots/en/comet-basic-usage.png" />
-      </div>
-      <div class="controls">
-        <a class="previous" href="#screenshot5">Wrap around to last screenshot</a>
-        <a class="next" href="#screenshot2">Go to screenshot 2</a>
-      </div>
-    </div>
-
-    <div class="screenshot" id="screenshot2">
-      <div class="content">
-        <img src="screenshots/en/comet-spell-check.png" />
-      </div>
-      <div class="controls">
-        <a class="previous" href="#screenshot1">Go to screenshot 1</a>
-        <a class="next" href="#screenshot3">Go to screenshot 3</a>
-      </div>
-    </div>
-
-    <div class="screenshot" id="screenshot3">
-      <div class="content">
-        <img src="screenshots/en/comet-emoji.png" />
-      </div>
-      <div class="controls">
-        <a class="previous" href="#screenshot2">Go to screenshot 2</a>
-        <a class="next" href="#screenshot4">Go to screenshot 4</a>
-      </div>
-    </div>
-
-    <div class="screenshot" id="screenshot4">
-      <div class="content">
-        <img src="screenshots/en/comet-settings.png" />
-      </div>
-      <div class="controls">
-        <a class="previous" href="#screenshot3">Go to screenshot 3</a>
-        <a class="next" href="#screenshot5">Go to screenshot 5</a>
-      </div>
-    </div>
-
-    <div class="screenshot" id="screenshot5">
-      <div class="content">
-        <img src="screenshots/en/comet-welcome.png" />
-      </div>
-      <div class="controls">
-        <a class="previous" href="#screenshot4">Go to screenshot 4</a>
-        <a class="next" href="#screenshot1">Wrap around to first screenshot</a>
-      </div>
-    </div>
-  </div>
-
-  <nav>
-    <ol>
-      <li><a href="#screenshot1">Screenshot 1</a></li>
-      <li><a href="#screenshot2">Screenshot 2</a></li>
-      <li><a href="#screenshot3">Screenshot 3</a></li>
-      <li><a href="#screenshot4">Screenshot 4</a></li>
-      <li><a href="#screenshot5">Screenshot 5</a></li>
-    </ol>
-  </nav>
-
-</section>
-
-<section id='get-it'>
-  <a id='install' class='button' href='org.small_tech.comet.flatpakref'><img src='icons/browser-download-symbolic.svg' alt=''>Install</a>
+    <p>A distraction-free Git commit message editor with spell-check, first line character limit warnings, and emoji support.</p>
+  </header>
 
   <!--
-    Currently in AppCenter review. Check latest status at:
-    https://github.com/elementary/appcenter-reviews/pull/225
+    Progressively-enhanced carousel for screenshots.
+
+    For techniques used, see:
+
+    Super Simple Progressively Enhanced Carousel with CSS Scroll Snap (Marksu Oberlehner)
+    https://markus.oberlehner.net/blog/super-simple-progressively-enhanced-carousel-with-css-scroll-snap/
+
+    CSS-only carousel (Chris Coyier)
+    https://css-tricks.com/css-only-carousel/
   -->
-  <!--
-  <a id='get-it-on-appcenter' class='button' href='https://appcenter.elementary.io/org.small_tech.comet'><img src='icons/io.elementary.appcenter-symbolic.svg' alt=''>Get it on AppCenter</a>
-  -->
+  <section class="carousel" aria-label="Gallery">
+    <div id="viewport">
+      <div class="screenshot" id="screenshot1">
+        <div class="content">
+          <img src="screenshots/en/comet-basic-usage.png" />
+        </div>
+        <div class="controls">
+          <a class="previous" href="#screenshot5">Wrap around to last screenshot</a>
+          <a class="next" href="#screenshot2">Go to screenshot 2</a>
+        </div>
+      </div>
 
-  <aside>Requires <a href='https://elementary.io/'>elementary OS 6</a>.</aside>
-</section>
+      <div class="screenshot" id="screenshot2">
+        <div class="content">
+          <img src="screenshots/en/comet-spell-check.png" />
+        </div>
+        <div class="controls">
+          <a class="previous" href="#screenshot1">Go to screenshot 1</a>
+          <a class="next" href="#screenshot3">Go to screenshot 3</a>
+        </div>
+      </div>
 
-<footer>
+      <div class="screenshot" id="screenshot3">
+        <div class="content">
+          <img src="screenshots/en/comet-emoji.png" />
+        </div>
+        <div class="controls">
+          <a class="previous" href="#screenshot2">Go to screenshot 2</a>
+          <a class="next" href="#screenshot4">Go to screenshot 4</a>
+        </div>
+      </div>
 
-  <ul id='links'>
-    <li><a href='https://github.com/small-tech/comet/#readme'>Help</a></li>
-    <li><a href='https://github.com/small-tech/comet/issues'>Issues</a></li>
-    <li><a id='wallpaper-link' href='./comet-wallpaper-4k-by-margo-de-weerdt-small-technology-foundation.jpg'>Wallpaper</a></li>
-    <li><a href='https://small-tech.org/fund-us'>Fund</a></li>
-  </ul>
-  <small id='info'>Made with <a href='https://github.com/small-tech/watson'>Watson</a>.</a></small>
-  <small id='copyright'>Copyright ⓒ 2021-present <a href='https://ar.al'>Aral Balkan</a>, <a href='https://small-tech.org'>Small Technology Foundation</a>.</small>
-  <small id='license'><img src='icons/text-x-copying-symbolic.svg' alt=''>Licensed under <a href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GNU GPLv3</a>.</small>
-</footer>
+      <div class="screenshot" id="screenshot4">
+        <div class="content">
+          <img src="screenshots/en/comet-settings.png" />
+        </div>
+        <div class="controls">
+          <a class="previous" href="#screenshot3">Go to screenshot 3</a>
+          <a class="next" href="#screenshot5">Go to screenshot 5</a>
+        </div>
+      </div>
+
+      <div class="screenshot" id="screenshot5">
+        <div class="content">
+          <img src="screenshots/en/comet-welcome.png" />
+        </div>
+        <div class="controls">
+          <a class="previous" href="#screenshot4">Go to screenshot 4</a>
+          <a class="next" href="#screenshot1">Wrap around to first screenshot</a>
+        </div>
+      </div>
+    </div>
+
+    <nav>
+      <ol>
+        <li><a href="#screenshot1">Screenshot 1</a></li>
+        <li><a href="#screenshot2">Screenshot 2</a></li>
+        <li><a href="#screenshot3">Screenshot 3</a></li>
+        <li><a href="#screenshot4">Screenshot 4</a></li>
+        <li><a href="#screenshot5">Screenshot 5</a></li>
+      </ol>
+    </nav>
+
+  </section>
+
+  <section id='get-it'>
+    <a id='install' class='button' href='org.small_tech.comet.flatpakref'><img src='icons/browser-download-symbolic.svg' alt=''>Install</a>
+
+    <!--
+      Currently in AppCenter review. Check latest status at:
+      https://github.com/elementary/appcenter-reviews/pull/225
+    -->
+    <!--
+    <a id='get-it-on-appcenter' class='button' href='https://appcenter.elementary.io/org.small_tech.comet'><img src='icons/io.elementary.appcenter-symbolic.svg' alt=''>Get it on AppCenter</a>
+    -->
+
+    <aside>Requires <a href='https://elementary.io/'>elementary OS 6</a>.</aside>
+  </section>
+
+  <footer>
+    <ul id='links'>
+      <li><a href='https://github.com/small-tech/comet/#readme'>Help</a></li>
+      <li><a href='https://github.com/small-tech/comet/issues'>Issues</a></li>
+      <li><a id='wallpaper-link' href='./comet-wallpaper-4k-by-margo-de-weerdt-small-technology-foundation.jpg'>Wallpaper</a></li>
+      <li><a href='https://small-tech.org/fund-us'>Fund</a></li>
+    </ul>
+    <small id='info'>Made with <a href='https://github.com/small-tech/watson'>Watson</a>.</a></small>
+    <small id='copyright'>Copyright ⓒ 2021-present <a href='https://ar.al'>Aral Balkan</a>, <a href='https://small-tech.org'>Small Technology Foundation</a>.</small>
+    <small id='license'><img src='icons/text-x-copying-symbolic.svg' alt=''>Licensed under <a href='https://www.gnu.org/licenses/gpl-3.0.en.html'>GNU GPLv3</a>.</small>
+  </footer>
+</div>
 
 <script src='index.js'></script>
 <div id='wallpaper'>
-  x
+  <div id='wallpaperInstructions'>
+    <h2>Comet wallpaper by <a href='https://www.margodeweerdt.com/about'><img alt='Margo de Weerdt' src='margo-logo.png'></a></h2>
+    <p><small>Use <kbd>Ctrl</kbd> <kbd>+</kbd> and <kbd>Ctrl</kbd> <kbd>-</kbd> to zoom in and out.</small></p>
+    <p><a download href='comet-wallpaper-4k-by-margo-de-weerdt-small-technology-foundation.jpg'>Download (1.6MB)</a></p>
+    <button id='closeButton'>Close</button>
+  </div>
 </div>
 </body>
 </html>

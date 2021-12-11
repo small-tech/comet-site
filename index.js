@@ -96,15 +96,29 @@ window.addEventListener('load', () => {
     nextButton.addEventListener('click', navigationClickHandler)
   })
 
-  document.getElementById('viewport').addEventListener('scroll', (event) => {
-    const currentViewportWidth = event.target.offsetWidth;
-    const currentViewportScrollPosition = event.target.scrollLeft;
+  document.getElementById('viewport').addEventListener('scroll', event => {
+    const currentViewportWidth = event.target.offsetWidth
+    const currentViewportScrollPosition = event.target.scrollLeft
 
     if (currentViewportScrollPosition % currentViewportWidth === 0) {
       currentScreenshotIndex = currentViewportScrollPosition / currentViewportWidth
       transitioning = false
       updateNavigationIndicators()
     }
+  })
+
+  // Progressively enhance the wallpaper link so it fades in the wallpaper and
+  // presents links to download it.
+  const wallpaper = document.getElementById('wallpaper')
+  const content = document.getElementById('content')
+  document.getElementById('wallpaper-link').addEventListener('click', event => {
+    event.preventDefault()
+    wallpaper.className = 'fadeIn'
+    content.className = 'fadeOut'
+  })
+  document.getElementById('closeButton').addEventListener('click', event => {
+    wallpaper.className = 'fadeOut'
+    content.className = 'fadeIn'
   })
 })
 
